@@ -23,7 +23,7 @@ To get started, follow these steps:
    https://pytorch.org/get-started/locally/
     ```
 4. download quantized Mistral7b model:
-   ''' bash    '''
+   '''bash    '''
 5. Run the ChatBot:
     ```bash
     streamlit run app.py
