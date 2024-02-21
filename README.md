@@ -43,6 +43,23 @@ The ChatBot responds to queries related to CPGRAMS. You can interact with it by 
 - Pillow
 - better_profanity
 
+## Features
+
+### 1. Intelligent Conversations
+The ChatBot engages in intelligent conversations, providing relevant and context-aware responses to user queries.
+
+### 2. Offensive Language Detection
+Utilizes the `better_profanity` library to detect and handle offensive language, ensuring a respectful and safe interaction environment.
+
+### 3. GPU/CPU Compatibility
+Checks for GPU availability using PyTorch, allowing seamless execution on GPU if available, or falling back to CPU.
+
+### 4. Streamlit Interface
+Employs the Streamlit framework to create a user-friendly interface, making it easy for users to interact with the ChatBot.
+
+### 5. Conversation History
+Maintains a conversation history that is displayed using Streamlit messages, providing users with a contextual view of the ongoing conversation.
+
 ## Code Structure
 
 The project follows a modular structure for better organization. Here's an overview of the code structure:
