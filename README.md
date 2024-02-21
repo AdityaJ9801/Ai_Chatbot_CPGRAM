@@ -49,7 +49,7 @@ The project follows a modular structure for better organization. Here's an overv
 
 ```plaintext
 📦 BreadcrumbsAi_Chatbot-CPGRAM-
- ┣ 📂 Vector_data
+ ┣ 📂 Vector_Data
  ┣ 📜 app.py
  ┣ 📜 chatbot.png
  ┣ 📜 README.md
