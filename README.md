@@ -6,6 +6,9 @@ Welcome to the Grievance ChatBot GitHub repository! This ChatBot is designed to 
 
 The Grievance ChatBot leverages advanced technologies such as streamlit, torch, langchain, and more to offer an interactive and intelligent conversational experience. It utilizes a combination of language models, embeddings, and vector stores to understand and respond to user queries.
 
+## Flowchart
+![cpgram](https://github.com/AdityaJ9801/Ai_Chatbot-CPGRAM-/assets/124603391/2e4182c8-0699-461c-b471-aa85d963bd8c)
+
 ## Installation
 
 To get started, follow these steps:
