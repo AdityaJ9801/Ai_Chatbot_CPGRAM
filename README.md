@@ -23,7 +23,7 @@ To get started, follow these steps:
    https://pytorch.org/get-started/locally/
     ```
 4. download quantized Mistral7b model:
-   '''    '''
+   ''' bash    '''
 5. Run the ChatBot:
     ```bash
     streamlit run app.py
@@ -46,10 +46,10 @@ The ChatBot responds to queries related to CPGRAMS. You can interact with it by 
 The project follows a modular structure for better organization. Here's an overview of the code structure:
 
 ```plaintext
-📦 your-repo
+📦 BreadcrumbsAi_Chatbot-CPGRAM-
  ┣ 📂 Vector_data
  ┣ 📜 app.py
  ┣ 📜 chatbot.png
  ┣ 📜 README.md
  ┣ 📜 Mistral7b.gguf
-
+'''
