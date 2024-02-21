@@ -14,13 +14,11 @@ To get started, follow these steps:
     ```bash
     pip install -r requirements.txt
     ```
-
 2. Clone the repository:
     ```bash
-    git clone https://github.com/your-username/your-repo.git
-    cd your-repo
+    https://github.com/AdityaJ9801/Ai_Chatbot-CPGRAM-.git
     ```
-3. Install Cuda for gpu:
+3. Install Cuda dependences if running on local pc with gpu:
     ```bash
    https://pytorch.org/get-started/locally/
     ```
