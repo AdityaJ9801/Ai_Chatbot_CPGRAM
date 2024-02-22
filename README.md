@@ -13,13 +13,13 @@ The Grievance ChatBot leverages advanced technologies such as streamlit, torch, 
 
 To get started, follow these steps:
 
-1. Install the required libraries:
-    ```bash
-    pip install -r requirements.txt
-    ```
-2. Clone the repository:
+1. Clone the repository:
     ```bash
     https://github.com/AdityaJ9801/Ai_Chatbot-CPGRAM-.git
+    ```
+2. Install the required libraries:
+    ```bash
+    pip install -r requirements.txt
     ```
 3. Install Cuda dependences if running on local pc with gpu:
     ```bash
