@@ -15,7 +15,7 @@ To get started, follow these steps:
 
 1. Clone the repository:
     ```bash
-    https://github.com/AdityaJ9801/Ai_Chatbot-CPGRAM-.git
+    git clone https://github.com/AdityaJ9801/Ai_Chatbot-CPGRAM-.git
     ```
 2. Install the required libraries:
     ```bash
