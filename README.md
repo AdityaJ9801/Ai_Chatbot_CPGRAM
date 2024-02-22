@@ -43,7 +43,8 @@ To get started, follow these steps:
 
 ## Usage
 
-The ChatBot responds to queries related to CPGRAMS. Interact by asking questions or exploring predefined buttons like "What is CPGRAM?" or "How to fill grievance form?".
+The Grievance ChatBot serves as a user-friendly and efficient virtual assistant for citizens engaging with the CPGRAMS portal. Designed to streamline the grievance filing process, the chatbot leverages advanced language models and embeddings, notably the Mistral-7B-Instruct model, to provide Ministry-specific assistance. Users can interact seamlessly through the Streamlit interface, obtaining instant and accurate responses to common queries related to grievance submission. With a robust dataset from CPGRAMS, the chatbot's knowledge base ensures comprehensive support. The project's modular architecture, incorporating technologies like FAISS for vector storage, makes it adaptable for further enhancements. Ultimately, the Grievance ChatBot enhances user experience, simplifying interactions with CPGRAMS and expediting grievance resolution for citizens.
+
 
 ## Features
 
