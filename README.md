@@ -31,8 +31,11 @@ To get started, follow these steps:
     ```bash
     # Follow instructions at https://pytorch.org/get-started/locally/
     ```
-5. Download the quantized Mistral7b model (provide instructions or link).
-
+5. Download the quantized Mistral7b model:
+    ```bash
+    git lfs install
+    git clone https://huggingface.co/Aditya757864/Mistral7B
+    ```
 6. Run the ChatBot:
     ```bash
     streamlit run app.py
