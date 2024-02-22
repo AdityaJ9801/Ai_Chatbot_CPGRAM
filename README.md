@@ -15,7 +15,8 @@ To get started, follow these steps:
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/AdityaJ9801/Ai_Chatbot-CPGRAM-.git
+    git clone https://github.com/AdityaJ9801/Ai_Chatbot_CPGRAM.git
+    cd Ai_Chatbot_CPGRAM
     ```
 2. Install the required libraries:
     ```bash
@@ -27,7 +28,6 @@ To get started, follow these steps:
     ```
 4. download quantized Mistral7b model:
    ```bash
-    streamlit run app.py
     ```
 5. Run the ChatBot:
     ```bash
