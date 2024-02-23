@@ -64,7 +64,7 @@ The Grievance ChatBot serves as a user-friendly and efficient virtual assistant 
    - Maintains a conversation history displayed using Streamlit messages, providing users with contextual views of ongoing conversations.
 
 # Language Model (LLM) - Mistral 7B-Instruct 
-##<img src="https://github.com/AdityaJ9801/Ai_Chatbot_CPGRAM/assets/124603391/968033b7-5042-405d-b687-016bd97a0047" alt="mistral-7b-v0" width="400">
+<img src="https://github.com/AdityaJ9801/Ai_Chatbot_CPGRAM/assets/124603391/968033b7-5042-405d-b687-016bd97a0047" alt="mistral-7b-v0" width="400">
 
 ## Overview
 The Grievance ChatBot project harnesses the power of Mistral 7B-Instruct, a state-of-the-art language model (LLM) designed for advanced question-answering capabilities. This section provides an in-depth understanding of the Mistral 7B-Instruct model, its strategic quantization, and its crucial role within the Grievance ChatBot project.
