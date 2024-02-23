@@ -63,6 +63,41 @@ The Grievance ChatBot serves as a user-friendly and efficient virtual assistant 
 5. **Conversation History**
    - Maintains a conversation history displayed using Streamlit messages, providing users with contextual views of ongoing conversations.
 
+# Language Model (LLM) - Mistral 7B-Instruct ![mistral-7b-v0](https://github.com/AdityaJ9801/Ai_Chatbot_CPGRAM/assets/124603391/968033b7-5042-405d-b687-016bd97a0047)
+
+
+## Overview
+The Grievance ChatBot project harnesses the power of Mistral 7B-Instruct, a state-of-the-art language model (LLM) designed for advanced question-answering capabilities. This section provides an in-depth understanding of the Mistral 7B-Instruct model, its strategic quantization, and its crucial role within the Grievance ChatBot project.
+
+## Mistral 7B-Instruct Model
+Mistral 7B-Instruct is a language model renowned for its proficiency in handling instructional language. This model is specifically tailored for interpreting user queries and generating accurate responses within the contextual domain of CPGRAMS (Centralised Public Grievance Redress and Monitoring System).
+
+### Quantization
+The Grievance ChatBot project strategically employs the quantized version of the Mistral 7B-Instruct model (mistral-7b-instruct-v0.1.Q4_K_M.gguf). Quantization involves reducing the precision of the model's weights, resulting in enhanced memory efficiency and faster execution. This optimization is particularly crucial for real-time applications like the Grievance ChatBot, where responsiveness is paramount.
+
+### Reasons for Special Use
+The selection of the Mistral 7B-Instruct model is grounded in its specialized capabilities for handling instructional language. Given the nature of user queries related to grievance filing and CPGRAMS procedures, a model fine-tuned for instructive contexts aligns seamlessly with the project's objectives. Mistral 7B-Instruct excels in comprehending and generating responses in instructional and informational scenarios, making it an ideal choice for the chatbot's domain.
+
+### Model Requirements
+- **Name:** mistral-7b-instruct-v0.2.Q4_K_S.gguf
+- **Quant Method:** Q4_K_S
+- **Bits:** 4
+- **Size:** 4.14
+- **Max RAM Required:** 6.64 GB
+- **Use Case:** Small with greater quality loss
+
+## Model Comparison Chart
+![mistral](https://github.com/AdityaJ9801/Ai_Chatbot_CPGRAM/assets/124603391/78ef72b8-ce7a-4a15-a3fe-1c34b63e310c)
+
+## Quantization Benefits
+Quantizing the Mistral 7B-Instruct model brings several advantages:
+- **Memory Efficiency:** Reduced precision leads to lower memory usage, enabling smoother deployment and execution.
+- **Faster Inference:** Quantization enhances inference speed, contributing to a more responsive user experience in real-time interactions.
+
+## References
+1. [Mistral-7B-Instruct Model Paper](https://mistral.ai/assets/Mistral_7B_paper_v_0_1.pdf)
+
+
 ## Code Structure
 
 The project follows a modular structure for better organization. Here's an overview of the code structure:
