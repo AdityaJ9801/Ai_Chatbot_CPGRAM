@@ -40,6 +40,17 @@ To get started, follow these steps:
     ```bash
     streamlit run app.py
     ```
+## Code Structure
+
+The project follows a modular structure for better organization. Here's an overview of the code structure:
+
+```plaintext
+📦 Ai_Chatbot-CPGRAM-
+ ┣ 📂 Vector_Data
+ ┣ 📜 app.py
+ ┣ 📜 chatbot.png
+ ┣ 📜 README.md
+ ┣ 📜 Mistral7b.gguf
 
 ## Usage
 
@@ -106,14 +117,4 @@ Quantizing the Mistral 7B-Instruct model brings several advantages:
 4. [Anaconda Blog - How to Build a Retrieval-Augmented Generation Chatbot](https://www.anaconda.com/blog/how-to-build-a-retrieval-augmented-generation-chatbot)
 
 
-## Code Structure
 
-The project follows a modular structure for better organization. Here's an overview of the code structure:
-
-```plaintext
-📦 Ai_Chatbot-CPGRAM-
- ┣ 📂 Vector_Data
- ┣ 📜 app.py
- ┣ 📜 chatbot.png
- ┣ 📜 README.md
- ┣ 📜 Mistral7b.gguf
