@@ -21,7 +21,7 @@ To get started, follow these steps:
 2. Create a virtual environment (recommended):
     ```bash
     python -m venv venv
-    source venv/bin/activate  # On Windows: .\venv\Scripts\activate
+    .\venv\Scripts\activate  # On Mac: source venv/bin/activate
     ```
 3. Install the required libraries:
     ```bash
