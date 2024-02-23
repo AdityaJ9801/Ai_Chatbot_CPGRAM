@@ -89,7 +89,10 @@ The selection of the Mistral 7B-Instruct model is grounded in its specialized ca
 - **Use Case:** Small with greater quality loss
 
 ## Model Comparison Chart
-![mistral](https://github.com/AdityaJ9801/Ai_Chatbot_CPGRAM/assets/124603391/78ef72b8-ce7a-4a15-a3fe-1c34b63e310c)
+<p align="center">
+<img src="https://github.com/AdityaJ9801/Ai_Chatbot_CPGRAM/assets/124603391/78ef72b8-ce7a-4a15-a3fe-1c34b63e310c" alt="mistral-7b-v0" width="400">
+</p>
+
 
 ## Quantization Benefits
 Quantizing the Mistral 7B-Instruct model brings several advantages:
