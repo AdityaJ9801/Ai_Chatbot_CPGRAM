@@ -100,7 +100,10 @@ Quantizing the Mistral 7B-Instruct model brings several advantages:
 - **Faster Inference:** Quantization enhances inference speed, contributing to a more responsive user experience in real-time interactions.
 
 ## References
-1. [Mistral-7B-Instruct Model Paper](https://mistral.ai/assets/Mistral_7B_paper_v_0_1.pdf)
+1. [Langchain Documentation - Getting Started](https://python.langchain.com/docs/get_started/introduction)
+2. [Langchain Documentation - Vector Stores with FAISS](https://python.langchain.com/docs/integrations/vectorstores/faiss)
+3. [Mistral-7B-Instruct Model Paper](https://mistral.ai/assets/Mistral_7B_paper_v_0_1.pdf)
+4. [Anaconda Blog - How to Build a Retrieval-Augmented Generation Chatbot](https://www.anaconda.com/blog/how-to-build-a-retrieval-augmented-generation-chatbot)
 
 
 ## Code Structure
