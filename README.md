@@ -2,7 +2,7 @@
 
 Welcome to the Grievance ChatBot GitHub repository! This ChatBot is designed to provide support and answers related to CPGRAMS (Centralised Public Grievance Redress and Monitoring System).
 
-## Overview
+## Project Overview
 
 The Grievance ChatBot leverages cutting-edge technologies such as Streamlit, PyTorch, and LangChain to deliver an interactive and intelligent conversational experience. It incorporates sophisticated language models, embeddings, and vector stores to comprehend and respond effectively to user queries.
 
@@ -50,7 +50,7 @@ The project follows a modular structure for better organization. Here's an overv
  ┣ 📜 app.py
  ┣ 📜 chatbot.png
  ┣ 📜 README.md
- ┣ 📜 Mistral7b.gguf
+ ┣ 📜 mistral-7b-instruct-v0.1.Q4_K_M .gguf
 ```
 ## Usage
 
