@@ -45,7 +45,7 @@ def set_custom_prompt():
 def qa_llm():
     llm = LlamaCpp(
         streaming=True,
-        model_path="Mistral7B\mistral-7b-instruct-v0.1.Q4_K_M .gguf",
+        model_path="Mistral7B/mistral-7b-instruct-v0.1.Q4_K_M .gguf",
         temperature=0.5,
         top_p=1,
         verbose=True,
@@ -85,13 +85,13 @@ def initialize_session_state():
             st.session_state['history'] = []
 
         if 'generated' not in st.session_state:
-            st.session_state['generated'] = ["Hello! Ask me anything about 🤗"]
+            st.session_state['generated'] = ["Hello! Ask me any queries related to Grievance and CPGRAM Portal.."]
 
         if 'past' not in st.session_state:
             st.session_state['past'] = ["Hey! 👋"]
 
 def main():
-    st.title("🤖 CPGRAM Grievance Support")
+    st.title("🤖 CPGRAM Grievance Chatbot")
     initialize_session_state()
     reply_container = st.container()
     user_input = st.chat_input(placeholder="Please describe your queries here...", key='input')
