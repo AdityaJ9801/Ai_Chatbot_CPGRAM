@@ -56,6 +56,14 @@ The project follows a modular structure for better organization. Here's an overv
 
 The Grievance ChatBot serves as a user-friendly and efficient virtual assistant for citizens engaging with the CPGRAMS portal. Designed to streamline the grievance filing process, the chatbot leverages advanced language models and embeddings, notably the Mistral-7B-Instruct model, to provide Ministry-specific assistance. Users can interact seamlessly through the Streamlit interface, obtaining instant and accurate responses to common queries related to grievance submission. With a robust dataset from CPGRAMS, the chatbot's knowledge base ensures comprehensive support. The project's modular architecture, incorporating technologies like FAISS for vector storage, makes it adaptable for further enhancements. Ultimately, the Grievance ChatBot enhances user experience, simplifying interactions with CPGRAMS and expediting grievance resolution for citizens.
 
+## Project Requirements to run code 
+### Model Requirements
+- **Model name:** mistral-7b-instruct-v0.2.Q4_K_S.gguf
+- **Quant Method:** Q4_K_S
+- **Bits:** 4
+- **Size:** 4.14
+- **Max RAM Required:** 8 GB
+- **Use Case:** Small with greater quality loss
 
 ## Features
 
@@ -91,13 +99,6 @@ The Grievance ChatBot project strategically employs the quantized version of the
 ### Reasons for Special Use
 The selection of the Mistral 7B-Instruct model is grounded in its specialized capabilities for handling instructional language. Given the nature of user queries related to grievance filing and CPGRAMS procedures, a model fine-tuned for instructive contexts aligns seamlessly with the project's objectives. Mistral 7B-Instruct excels in comprehending and generating responses in instructional and informational scenarios, making it an ideal choice for the chatbot's domain.
 
-### Model Requirements
-- **Name:** mistral-7b-instruct-v0.2.Q4_K_S.gguf
-- **Quant Method:** Q4_K_S
-- **Bits:** 4
-- **Size:** 4.14
-- **Max RAM Required:** 6.64 GB
-- **Use Case:** Small with greater quality loss
 
 ## Model Comparison Chart
 <p align="center">
