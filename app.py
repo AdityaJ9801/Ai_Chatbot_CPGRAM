@@ -45,7 +45,7 @@ def set_custom_prompt():
 def qa_llm():
     llm = LlamaCpp(
         streaming=True,
-        model_path="mistral-7b-instruct-v0.1.Q4_K_M.gguf",
+        model_path="Mistral7B\mistral-7b-instruct-v0.1.Q4_K_M .gguf",
         temperature=0.5,
         top_p=1,
         verbose=True,
