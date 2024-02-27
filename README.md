@@ -28,8 +28,7 @@ To get started, follow these steps:
     pip install -r requirements.txt
     ```
 4. Install CUDA dependencies if using a local GPU:
-     Follow instructions at
-    (https://pytorch.org/get-started/locally/)
+   https://pytorch.org/get-started/locally/
     
 5. Download the quantized Mistral7b model:
     ```bash
