@@ -74,11 +74,6 @@ def process_answer(instruction):
     qa_llm.clear()  # Call the clear() method of the cached function
     return answer
 
-# Display conversation history using Streamlit messages
-def display_conversation(history):
-    for i in range(len(history["generated"])):
-        message(history["past"][i], is_user=True, key=str(i) + "_user")
-        message(history["generated"][i],key=str(i))
 
 def initialize_session_state():
         if 'history' not in st.session_state:
