@@ -36,7 +36,7 @@ To get started, follow these steps:
 
    a. **Manual Download:**
       - Download the model manually by clicking [this link](https://huggingface.co/Aditya757864/Mistral7B/blob/main/mistral-7b-instruct-v0.1.Q4_K_M%20.gguf).
-      - After downloading, place the downloaded `.gguf` file inside the "Mistral7B" folder within your project directory.
+      - After downloading, place the downloaded `.gguf` file inside the "Mistral7B" 📂folder within your project directory.
 
    b. **Using Git:**
       ```bash
