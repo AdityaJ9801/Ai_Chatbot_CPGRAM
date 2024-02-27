@@ -51,10 +51,12 @@ The project follows a modular structure for better organization. Here's an overv
 ```plaintext
 📦 Ai_Chatbot-CPGRAM-
  ┣ 📂 Vector_Data
+ ┣ 📂 Vector_Data
+    └─ 📜 mistral-7b-instruct-v0.1.Q4_K_M .gguf
  ┣ 📜 app.py
  ┣ 📜 chatbot.png
  ┣ 📜 README.md
- ┣ 📜 mistral-7b-instruct-v0.1.Q4_K_M .gguf
+
 ```
 ## Usage
 
