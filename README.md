@@ -30,16 +30,22 @@ To get started, follow these steps:
 4. Install CUDA dependencies if using a local GPU:
    https://pytorch.org/get-started/locally/
     
-5. Download the quantized Mistral7b model:
+5. Obtain the Quantized Mistral7b Model:
+
+   To utilize the quantized Mistral7b model in the Grievance ChatBot project, follow these steps:
 
    a. **Manual Download:**
-      - Access the model via this [link](https://huggingface.co/Aditya757864/Mistral7B/blob/main/mistral-7b-instruct-v0.1.Q4_K_M%20.gguf).
+      - Download the model manually by clicking [this link](https://huggingface.co/Aditya757864/Mistral7B/blob/main/mistral-7b-instruct-v0.1.Q4_K_M%20.gguf).
+      - After downloading, place the downloaded `.gguf` file inside the "Mistral7B" folder within your project directory.
 
    b. **Using Git:**
       ```bash
       git lfs install
       git clone https://huggingface.co/Aditya757864/Mistral7B
       ```
+      This will automatically include the necessary `.gguf` file within the "Mistral7B" folder.
+
+   Ensure the model file (`mistral-7b-instruct-v0.1.Q4_K_M.gguf`) is accessible to the Grievance ChatBot project code for advanced question-answering capabilities.
 6. Run the ChatBot:
     ```bash
     streamlit run app.py
@@ -51,7 +57,7 @@ The project follows a modular structure for better organization. Here's an overv
 ```plaintext
 📦 Ai_Chatbot-CPGRAM-
  ┣ 📂 Vector_Data
- ┣ 📂 Vector_Data
+ ┣ 📂 Mistral7B
     └─ 📜 mistral-7b-instruct-v0.1.Q4_K_M .gguf
  ┣ 📜 app.py
  ┣ 📜 chatbot.png
