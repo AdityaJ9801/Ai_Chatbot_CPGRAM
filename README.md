@@ -32,13 +32,15 @@ To get started, follow these steps:
     
 5. Download the quantized Mistral7b model:
 
-   Download manually: [link](https://huggingface.co/Aditya757864/Mistral7B/blob/main/mistral-7b-instruct-v0.1.Q4_K_M%20.gguf)
-   or
-    ```bash
-    git lfs install
-    git clone https://huggingface.co/Aditya757864/Mistral7B
-    ```
-7. Run the ChatBot:
+   a. **Manual Download:**
+      - Access the model via this [link](https://huggingface.co/Aditya757864/Mistral7B/blob/main/mistral-7b-instruct-v0.1.Q4_K_M%20.gguf).
+
+   b. **Using Git:**
+      ```bash
+      git lfs install
+      git clone https://huggingface.co/Aditya757864/Mistral7B
+      ```
+6. Run the ChatBot:
     ```bash
     streamlit run app.py
     ```
