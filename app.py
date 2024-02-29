@@ -53,7 +53,7 @@ def qa_llm():
     llm = LlamaCpp(
         streaming=True,
         model_path="Mistral7B/mistral-7b-instruct-v0.1.Q4_K_M .gguf",
-        temperature=0.75,
+        temperature=0.3,
         top_p=1,
         verbose=True,
         n_ctx=4096,
