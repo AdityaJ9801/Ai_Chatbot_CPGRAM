@@ -1,7 +1,9 @@
 import streamlit as st
 import torch
 from langchain_community.llms import LlamaCpp
-from langchain import PromptTemplate
+from langchain.callbacks.manager import CallbackManager
+from langchain.callbacks.streaming_stdout import StreamingStdOutCallbackHandler
+from langchain.prompts import PromptTemplate
 from langchain_community.embeddings import SentenceTransformerEmbeddings
 from langchain_community.vectorstores import FAISS
 from langchain.chains import RetrievalQA
@@ -25,20 +27,25 @@ if device.type == "cuda":
     print("GPU index:", device.index)
 else:
     print("Using CPU")
+    
 icon = Image.open("chatbot.png")
 icon = icon.resize((64, 64)) # You can adjust the size as per your requirement
 st.set_page_config(page_title="Grievance ChatBot", page_icon=icon)
-
-custom_prompt_template = """Always Answer the following QUESTION based on the CONTEXT given and make sure that the answer is in bullet points along with a few conversating lines related to the question. If the CONTEXT doesn't contain the answer, or the question is outside the domain of expertise for CPGRAMS (Centralised Public Grievance Redress and Monitoring System), politely respond with "I'm sorry, but I don't have any information on that topic in my database. However, I'm here to help with any other questions or concerns you may have regarding grievance issues or anything else! Feel free to ask, and let's work together to find a solution. Your satisfaction is my priority!"
+custom_prompt_template = """
+Always Answer the following QUESTION based on the CONTEXT ONLY and make sure the answer is in bullet points along with a few conversating lines related to the question. If the CONTEXT doesn't contain the answer, or the question is outside the domain of expertise for CPGRAMS (Centralised Public Grievance Redress and Monitoring System), politely respond with "I'm sorry, but I don't have any information on that topic in my database. However, I'm here to help with any other questions or concerns you may have regarding grievance issues or anything else! Feel free to ask, and let's work together to find a solution. Your satisfaction is my priority!"
 
 context : {context}
 
 question : {question}
 
 """
+
+
+# Callbacks support token-wise streaming
+callback_manager = CallbackManager([StreamingStdOutCallbackHandler()])
 def set_custom_prompt():
     """Prompt template for QA retrieval for each vector store"""
-    prompt = PromptTemplate(template=custom_prompt_template, input_variables=['context', "question"])
+    prompt = PromptTemplate(template=custom_prompt_template, input_variables=["context", "question"])
     return prompt
 
 @st.cache_resource
@@ -48,50 +55,55 @@ def qa_llm():
         model_path="Mistral7B/mistral-7b-instruct-v0.1.Q4_K_M .gguf",
         temperature=0.5,
         top_p=1,
+        n_gpu_layers= -1 ,
+        echo=False,
         verbose=True,
         n_ctx=4096,
-        device=device  # Set the device for the LLM
+        max_tokens = 1000,
+        device=device, # Set the device for the LLM
+        callback_manager=callback_manager,
     )
     embeddings = SentenceTransformerEmbeddings(model_name="all-MiniLM-L6-v2")
     db = FAISS.load_local("Vector_Data",embeddings)
     prompt = set_custom_prompt()
-    retriever = db.as_retriever(search_kwargs ={'k':2})
+    retriever = db.as_retriever(search_kwargs ={"k":1})
     qa = RetrievalQA.from_chain_type(
         llm = llm,
         chain_type = "stuff",
         retriever = retriever,
         return_source_documents=True,
-        chain_type_kwargs={'prompt': prompt}
+        chain_type_kwargs={"prompt": prompt}
     )
     return qa
 
 def process_answer(instruction):
-    response = ''
+    response = ""
     instruction = instruction
     qa = qa_llm()
     generated_text = qa(instruction)
-    answer = generated_text['result']
+    answer = generated_text["result"]
     qa_llm.clear()  # Call the clear() method of the cached function
     return answer
 
 
-def initialize_session_state():
-        if 'history' not in st.session_state:
-            st.session_state['history'] = []
-
-        if 'generated' not in st.session_state:
-            st.session_state['generated'] = ["Hello! Ask me any queries related to Grievance and CPGRAM Portal.."]
-
-        if 'past' not in st.session_state:
-            st.session_state['past'] = ["Hey! 👋"]
-
 def main():
     st.title("🤖 CPGRAM Grievance Chatbot")
-    initialize_session_state()
+
+
+    if "generated" not in st.session_state:
+        st.session_state["generated"] = ["Hello! Ask me any queries related to Grievance and CPGRAM Portal.."]
+
+    if "past" not in st.session_state:
+        st.session_state["past"] = ["Hey! 👋"]
     reply_container = st.container()
-    user_input = st.chat_input(placeholder="Please describe your queries here...", key='input')
-   
-    if st.button("How to fill grievance form?", key="grievance_button"):
+    user_input = st.chat_input(placeholder="Please describe your queries here...", key="input")
+
+    if st.button("What is CPGRAM?", key="cpram_button"):
+        st.session_state['past'].append("What is CPGRAM?")
+        with st.spinner('Generating response...'):
+            answer = process_answer({'query': "What is CPGRAM?"})
+        st.session_state['generated'].append(answer)
+    elif st.button("How to fill grievance form?", key="grievance_button"):
         st.session_state['past'].append("How to fill grievance form?")
         with st.spinner('Generating response...'):
             answer = process_answer({'query': "How to fill grievance form?"})
@@ -107,12 +119,11 @@ def main():
             st.session_state['generated'].append(answer)
 
     if st.session_state["generated"]:
-        if st.session_state['generated']:
-            with reply_container:
-                for i in range(len(st.session_state['generated'])):
-                    message(st.session_state["past"][i], is_user=True, key=str(i) + '_user')
-                    message(st.session_state["generated"][i], key=str(i))
+        with reply_container :
+            for i in range(len(st.session_state["generated"])):
+                message(st.session_state["past"][i], is_user=True, key=str(i) + "_user")
+                message(st.session_state["generated"][i], key=str(i))
 
  
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
