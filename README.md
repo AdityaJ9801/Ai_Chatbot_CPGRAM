@@ -78,7 +78,7 @@ The Grievance ChatBot serves as a user-friendly and efficient virtual assistant 
 - **Quant Method:** Q4_K_S
 - **Bits:** 4
 - **Size:** 4.14
-- **Max RAM Required:** 8 GB
+- **Max RAM Required:** 16 GB
 - **Use Case:** Small with greater quality loss
 
 ## Features
