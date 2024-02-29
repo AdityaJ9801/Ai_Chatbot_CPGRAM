@@ -31,7 +31,7 @@ else:
 icon = Image.open("chatbot.png")
 icon = icon.resize((64, 64)) # You can adjust the size as per your requirement
 st.set_page_config(page_title="Grievance ChatBot", page_icon=icon)
-ustom_prompt_template = """Always Answer the following QUESTION based on the CONTEXT given and make sure that the answer is in bullet points along with a few conversating lines related to the question. If the CONTEXT doesn't contain the answer, or the question is outside the domain of expertise for CPGRAMS (Centralised Public Grievance Redress and Monitoring System), politely respond with "I'm sorry, but I don't have any information on that topic in my database. However, I'm here to help with any other questions or concerns you may have regarding grievance issues or anything else! Feel free to ask, and let's work together to find a solution. Your satisfaction is my priority!"
+custom_prompt_template = """Always Answer the following QUESTION based on the CONTEXT given and make sure that the answer is in bullet points along with a few conversating lines related to the question. If the CONTEXT doesn't contain the answer, or the question is outside the domain of expertise for CPGRAMS (Centralised Public Grievance Redress and Monitoring System), politely respond with "I'm sorry, but I don't have any information on that topic in my database. However, I'm here to help with any other questions or concerns you may have regarding grievance issues or anything else! Feel free to ask, and let's work together to find a solution. Your satisfaction is my priority!"
 context : {context}
 question : {question}
 """
