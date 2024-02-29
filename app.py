@@ -91,12 +91,7 @@ def main():
     reply_container = st.container()
     user_input = st.chat_input(placeholder="Please describe your queries here...", key='input')
    
-    if st.button("What is CPGRAM?", key="cpram_button"):
-        st.session_state['past'].append("What is CPGRAM?")
-        with st.spinner('Generating response...'):
-            answer = process_answer({'query': "What is CPGRAM?"})
-        st.session_state['generated'].append(answer)
-    elif st.button("How to fill grievance form?", key="grievance_button"):
+    if st.button("How to fill grievance form?", key="grievance_button"):
         st.session_state['past'].append("How to fill grievance form?")
         with st.spinner('Generating response...'):
             answer = process_answer({'query': "How to fill grievance form?"})
