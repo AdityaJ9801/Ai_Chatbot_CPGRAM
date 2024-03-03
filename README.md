@@ -39,13 +39,13 @@ To get started, follow these steps:
    To utilize the quantized Mistral7b model in the Grievance ChatBot project, follow these steps:
 
    a. **Manual Download:**
-      - Download the model manually by clicking [this link](https://huggingface.co/Aditya757864/Mistral7B/blob/main/mistral-7b-instruct-v0.1.Q4_K_M%20.gguf).
+      - Download the model manually by clicking [this link](https://huggingface.co/Aditya7864/Mistral7B/blob/main/mistral-7b-instruct-v0.1.Q4_K_M%20.gguf).
       - After downloading, place the downloaded `.gguf` file inside the "Mistral7B" 📂folder within your project directory.
 
    b. **Using Git:**
       ```bash
       git lfs install
-      git clone https://huggingface.co/Aditya757864/Mistral7B
+      git clone https://huggingface.co/Aditya7864/Mistral7B
       ```
       This will automatically include the necessary `.gguf` file within the "Mistral7B" folder.
 
