@@ -64,7 +64,7 @@ def qa_llm():
         callback_manager=callback_manager,
     )
     embeddings = SentenceTransformerEmbeddings(model_name="all-MiniLM-L6-v2")
-    db = FAISS.load_local("Vector_Data",embeddings)
+    db = FAISS.load_local("Vector_Data",embeddings,allow_dangerous_deserialization=True)
     prompt = set_custom_prompt()
     retriever = db.as_retriever(search_kwargs ={"k":1})
     qa = RetrievalQA.from_chain_type(
