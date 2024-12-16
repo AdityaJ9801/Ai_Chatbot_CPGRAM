@@ -6,6 +6,11 @@ https://github.com/AdityaJ9801/Ai_Chatbot_CPGRAM/assets/124603391/8f7494d3-7dd8-
 
 Welcome to the Grievance ChatBot GitHub repository! This ChatBot is designed to provide support and answers related to CPGRAMS (Centralised Public Grievance Redress and Monitoring System).
 
+## Colab Notebook
+
+If you prefer running this project on Google Colab, access the Colab notebook here:  
+[Grievance ChatBot Colab Notebook](https://colab.research.google.com/drive/1DKG8uehSPqA0UAG1YEJ9i9MY74h6pjGo?usp=sharing)
+
 ## Project Overview
 
 The Grievance ChatBot leverages cutting-edge technologies such as Streamlit, PyTorch, and LangChain to deliver an interactive and intelligent conversational experience. It incorporates sophisticated language models, embeddings, and vector stores to comprehend and respond effectively to user queries.
