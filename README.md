@@ -1,5 +1,6 @@
 # Grievance ChatBot
-
+## PROBLEM STATEMENT 2 
+Develop an AI/ML-driven Chatbot which is Ministry Specific to help the Citizens to resolve their common queries related to filing a Grievance in the CPGRAMS portal (https://pgportal.gov.in) and expedite smooth submission of grievances.
 
 https://github.com/AdityaJ9801/Ai_Chatbot_CPGRAM/assets/124603391/8f7494d3-7dd8-4d42-b762-54a37f08c2df
 
