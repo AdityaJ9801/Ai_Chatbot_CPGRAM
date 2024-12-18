@@ -4,7 +4,7 @@ accelerate==0.27.2
 sentence_transformers==2.3.1
 streamlit_chat==0.1.1
 streamlit==1.31.1
-faiss-cpu==1.7.4
+faiss-cpu
 tiktoken==0.6.0
 huggingface-hub==0.20.3
 pypdf==4.0.2
